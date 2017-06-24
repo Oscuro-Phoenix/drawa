@@ -1,0 +1,12 @@
+{
+	"name": "Doodledo",
+	"description": "A very basic collaborative doodle.",
+	"author": "github.com/felix1898",
+	"dependencies": {
+		"express": "4.x",
+		"socket.io": "*"
+	}
+	"scripts": {
+    "start": "node server.js"
+}
+}
