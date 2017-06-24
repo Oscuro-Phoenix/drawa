@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <link rel="icon" href="images/quill-drawing-a-line.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Yellowtail|Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'/>   <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+ <title>COllDraw</title>
+
+</head>
+
+<div id="wrapper">
+    <div class="text-center">
+    <topstuff>
+        <h1>Collaborative Drawing</h1>
+        <h5>Made By- Shakul Pathak</h5>
+    </topstuff>
+    </div>
+<div class="colors">
+
+    <header>
+        <h4 class="text-center" style="font-family: Audiowide;"><u>Tool Column</u></h4>
+
+    </header>
+    <a id="download" style="padding-left: 15px;"><button class="btn btn-danger">Download</button></a> <br>
+<br><br><a style="padding-left: 25px"><button class="btn btn-warning" id="delete">Clear</button></a> <br> <br>
+    <ul>
+     <strong>COLORS:</strong><br><br>
+    <li><div class="color black"></div><text style="padding-left:50px;font-style: bold;">Black</text></li><br>
+    <li><div class="color red"></div><text style="padding-left:50px;font-style: bold;">Red</text> </li><br>
+    <li><div class="color green"></div><text style="padding-left:50px;font-style: bold;">Green</text> </li><br>
+    <li><div class="color blue"></div><text style="padding-left:50px; font-style: bold;">Blue </text></li><br>
+    <li><div class="color yellow"></div><text style="padding-left:50px; font-style: bold;">Yellow</text> </li><br>
+    <li><div class="color white"></div><text style="padding-left:50px; font-style: bold;">Erase</text></li><br><br>
+    </ul>
+</div>
+<canvas class="drawingboard" id="drawingboard" height="100%"></canvas>
+</div>
+<script type='text/javascript'>
+    function downloadCanvas(link, canvasId, filename) {
+        link.href = document.getElementById(canvasId).toDataURL();
+        link.download = filename;
+    }
+
+    document.getElementById('download').addEventListener('click', function() {
+        downloadCanvas(this, 'drawingboard', 'drawing.png');
+    }, false);
+
+    
+
+
+</script>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="client.js"></script>
+
+</body>
+</html>
