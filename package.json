@@ -6,7 +6,5 @@
 		"express": "4.x",
 		"socket.io": "*"
 	}
-	"scripts": {
-    "start": "node server.js"
-}
+
 }
